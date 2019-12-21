@@ -110,8 +110,10 @@ bst *del(bst *p, int x)
 	return p;
 }
 
-void main()
+int main()
 {
+	//Let's play with it.
+	
 	bst *tree1 = NULL;
 	tree1 = insert(tree1, 25);
 	tree1 = insert(tree1, 8);
@@ -120,5 +122,7 @@ void main()
 	tree1 = insert(tree1, 61);
 	
 	print(tree1);
+	
+	return 0;
 	system("pause");
 }
