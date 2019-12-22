@@ -1,6 +1,6 @@
 # (C++) Binary Search Tree 
 
-> Functions
+##### FUNCTIONS #####
 > > - Insert
 > > - Delete
 > > - Count Leaves
