@@ -1,2 +1,6 @@
 # (C++) Binary Search Tree 
-C++ implementation of Binary Search Tree.
+
+> - Insert
+> - Delete
+> - Count Leaves
+> - Min/Max Val
