@@ -38,7 +38,7 @@ bst *print(bst *p)
 	}
 }
 
-int countnode(bst *p)
+int countleaves(bst *p)
 {
 	if (p == NULL)
 		return 0;
