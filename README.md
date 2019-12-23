@@ -3,5 +3,5 @@
 ##### FUNCTIONS #####
 > - Insert
 > - Delete
-> - Count Leaves
+> - Count Node
 > - Min/Max Val
