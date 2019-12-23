@@ -1,7 +1,7 @@
 # (C++) Binary Search Tree 
 
 ##### FUNCTIONS #####
-> - Insert
-> - Delete
-> - Count Node
-> - Min/Max Val
+> - **Insert**
+> - **Delete**
+> - **Count Node**
+> - **Min/Max Value**
