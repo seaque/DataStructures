@@ -1,7 +1,10 @@
-# (C++) Binary Search Tree 
+# (C++) Data Structures
 
-##### FUNCTIONS #####
-> - **Insert**
-> - **Delete**
-> - **Count Node**
-> - **Min/Max Value**
+> - **Linked List**
+> - **Stack**
+> - **Queue**
+> - **Binary Tree**
+> - **Binary Search Tree**
+> - **Binary Heap**
+> - **Hash Table**
+> - **Graph**
