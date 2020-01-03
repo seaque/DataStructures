@@ -80,5 +80,5 @@ int main()
     display(stack2);
     display(stack1);
 
-	return 0;
+    return 0;
 }
