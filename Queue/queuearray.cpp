@@ -15,7 +15,6 @@ que *create(que *p)
 	p->arr = NULL;
 	p->front = -1;
 	p->rear = -1;
-
 	return p;
 }
 
@@ -53,7 +52,6 @@ que *enqueue(que *p, int x)
 		
 	p->arr[++(p->rear)] = x;	
 	p->count++;
-
 	return p;
 }
 
@@ -93,7 +91,6 @@ pair<que*,int> dequeue(que *p, int x)
 	}
 	x = p->arr[++(p->front)];
 	p->count--;
-
 	return make_pair(p, x);
 }
 
