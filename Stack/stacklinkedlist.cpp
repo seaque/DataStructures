@@ -24,13 +24,13 @@ node *push(node *p, int x)
 	}
 	else
 	{
-		node *yrd;
-		yrd = new node;
-		yrd->data = x;
-		yrd->next = p;
-		p = yrd;
-		yrd = NULL;
-		delete yrd;
+		node *current;
+		current = new node;
+		current->data = x;
+		current->next = p;
+		p = current;
+		current = NULL;
+		delete current;
 	}
 	return p;
 }
@@ -38,18 +38,18 @@ node *push(node *p, int x)
 pair<node*, int> pop(node *p, int x)
 {
 	if (p == NULL)
-		cout << "Stack bos. ";
-	node *yrd;
-	yrd = p;
+		cout << "Stack is empty ";
+	node *current;
+	current = p;
 	p = p->next;
-	yrd->next = NULL;
-	return make_pair(p, yrd->data);
+	current->next = NULL;
+	return make_pair(p, current->data);
 }
 
-void print(node *p)
+void display(node *p)
 {
 	if (p == NULL)
-		cout << "Stack bos. ";
+		cout << "Stack is empty ";
 	else
 	{
 		while (p != NULL) {
@@ -68,7 +68,7 @@ int main()
 
 	for (int i=0; i < 7; i++)
 		stack1 = push(stack1, i);
-	yazdir(stack1);
+	display(stack1);
 	
 	for (int i=0; i < 3; i++)
 	{
@@ -76,8 +76,8 @@ int main()
 		stack1 = t.first;
 		stack2 = push(stack2, t.second);
 	}
-	print(stack1);
-	print(stack2);
+	display(stack1);
+	display(stack2);
 	
 	system("pause");
 	return 0;
