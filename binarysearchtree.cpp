@@ -112,8 +112,6 @@ bst *del(bst *p, int x)
 
 int main()
 {
-	//Let's play with it.
-	
 	bst *tree1 = NULL;
 	tree1 = insert(tree1, 25);
 	tree1 = insert(tree1, 8);
