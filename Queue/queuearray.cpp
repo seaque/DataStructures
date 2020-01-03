@@ -3,55 +3,57 @@
 using namespace std;
 
 struct que {
-	int boyut, count, front, rear;
-	int *dizi;
+	int size, count, front, rear;
+	int *arr;
 };
 
-que *tanimla(que *p)
+que *create(que *p)
 {
 	p = new que;
-	p->boyut = 10;
+	p->size = 10;
 	p->count = 0;
-	p->dizi = NULL;
+	p->arr = NULL;
 	p->front = -1;
 	p->rear = -1;
+
 	return p;
 }
 
 que *enqueue(que *p, int x)
 {
-	if (p->dizi == NULL)
-		p->dizi = new int[p->boyut];
-	if (p->rear == p->boyut - 1 && p->count != p->boyut) 
+	if (p->arr == NULL)
+		p->arr = new int[p->size];
+	if (p->rear == p->size - 1 && p->count != p->size) 
 		p->rear = -1;
-	if (p->count == p->boyut)
+	if (p->count == p->size)     //Enlarging the size
 	{
-		int *dizi2, k=0;
-		dizi2 = new int[p->boyut * 2];
+		int *arr2, k=0;
+		arr2 = new int[p->size * 2];
 		if (p->rear > p->front)
 		{
 			for (int i = p->front + 1 ; i <= p->rear; i++) {
-				dizi2[k] = p->dizi[i];
+				arr2[k] = p->arr[i];
 				k++;
 			}
 		}
 		if (p->front >= p->rear && p->count != 0)
 		{
-			for (int i = p->front + 1; i < p->boyut; i++) {
-				dizi2[k] = p->dizi[i];
+			for (int i = p->front + 1; i < p->size; i++) {
+				arr2[k] = p->arr[i];
 				k++;
 			}
 			for (int i = 0; i <= p->rear; i++) {
-				dizi2[k] = p->dizi[i];
+				arr2[k] = p->arr[i];
 				k++;
 			}
 		}
-		p->dizi = dizi2;
-		p->boyut *= 2;
+		p->arr = arr2;
+		p->size *= 2;
 	}
 		
-	p->dizi[++(p->rear)] = x;	
+	p->arr[++(p->rear)] = x;	
 	p->count++;
+
 	return p;
 }
 
@@ -59,66 +61,66 @@ pair<que*,int> dequeue(que *p, int x)
 {
 	if (p->count == 0) 
 		cout << "Kuyruk bos. ";
-	if (p->count <= p->boyut/2 )
+	if (p->count <= p->size/2 )     //Decreasing the size
 	{
-		int *dizi2, k = 0; 
-		dizi2 = new int[p->boyut/2];
+		int *arr2, k = 0; 
+		arr2 = new int[p->size/2];
 
 		if (p->rear > p->front) 
 		{
 			for (int i = p->front + 1 ; i <= p->rear; i++) {
-				dizi2[i] = p->dizi[i];
+				arr2[i] = p->arr[i];
 			}
 		}
 		if (p->front >= p->rear && p->count != 0) 
 		{
-			for (int i = p->front + 1; i < p->boyut; i++) {
-				dizi2[k] = p->dizi[i];
+			for (int i = p->front + 1; i < p->size; i++) {
+				arr2[k] = p->arr[i];
 				k++;
 			}
 			for (int i = 0; i <= p->rear; i++) {
-				dizi2[k] = p->dizi[i];
+				arr2[k] = p->arr[i];
 				k++;
 			}
 		}
-		p->dizi = dizi2;
-		p->boyut /= 2;
+		p->arr = arr2;
+		p->size /= 2;
 	}
 	else
 	{
-		if (p->front == p->boyut - 1 && p->count != 0)
+		if (p->front == p->size - 1 && p->count != 0)
 			p->front = -1;
 	}
-	x = p->dizi[++(p->front)];
+	x = p->arr[++(p->front)];
 	p->count--;
+
 	return make_pair(p, x);
 }
 
-void yazdir(que *p)
+void display(que *p)
 {
 	if (p->rear > p->front)
 		for (int i = p->front + 1 ; i <= p->rear; i++)
-			cout << p->dizi[i] << " ";
+			cout << p->arr[i] << " ";
 	if (p->front >= p->rear && p->count != 0)
 	{
-		for (int i = p->front + 1; i < p->boyut; i++)
-			cout << p->dizi[i] << " ";
+		for (int i = p->front + 1; i < p->size; i++)
+			cout << p->arr[i] << " ";
 		for (int i = 0; i <= p->rear; i++)
-			cout << p->dizi[i] << " ";
+			cout << p->arr[i] << " ";
 	}
-	system("pause");
 }
 
-void main()
+int main()
 {
 	que *s1 = NULL;
-	s1 = tanimla(s1);
+	s1 = create(s1);
 	que *s2 = NULL;
-	s2 = tanimla(s2);
+	s2 = create(s2);
 
 	for (int i=1; i <= 10; i++)
 		s1 = enqueue(s1, i);
-	yazdir(s1);
+	display(s1);
 
 	for (int i=0; i <= 5; i++)
 	{
@@ -126,7 +128,9 @@ void main()
 		s1 = f.first;
 		s2 = enqueue(s2, f.second);
 	}
-	yazdir(s1);
-	yazdir(s2);
-	system("pause");
+	display(s1);
+	display(s2);
+	
+    system("pause");
+    return 0;
 }
