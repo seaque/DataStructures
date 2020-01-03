@@ -57,6 +57,7 @@ void display(node *p)
 			p = p->next;
 		}
 	}
+	system("pause");
 }
 
 int main()
@@ -76,9 +77,8 @@ int main()
 		stack1 = t.first;
 		stack2 = push(stack2, t.second);
 	}
-	display(stack1);
-	display(stack2);
-	
-	system("pause");
+    display(stack2);
+    display(stack1);
+
 	return 0;
 }
