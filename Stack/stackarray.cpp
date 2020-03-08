@@ -57,7 +57,7 @@ int pop(st *s)
 	return s->arr[(s->top)--];
 }
 
-void display(st *s)
+void print(st *s)
 {
 	for (int i = s->top; i > -1; i--)
 		cout << s->arr[i] << "\n";
@@ -73,9 +73,9 @@ int main()
     for (int i=0; i < 4; i++)
     	push(stack2, pop(stack1));
 
-	display(stack1);
+	print(stack1);
     system("pause");
-	display(stack2);
+	print(stack2);
 	system("pause");
 	return 0;
 }
