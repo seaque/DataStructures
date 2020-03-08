@@ -3,8 +3,6 @@
 - **Linked List**
 - **Stack**
 - **Queue**
-- **Binary Tree**
-- **Binary Search Tree** 
-- **Binary Heap**
+- **Trees**
 - **Hash Table**
 - **Graph**
