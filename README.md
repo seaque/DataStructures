@@ -1,6 +1,6 @@
 # (C++) Data Structures
 
-- **Linked List**
+## Linked List
   - Singly Linked 
   - Doubly Linked
 - **Stack**
