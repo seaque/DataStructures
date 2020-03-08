@@ -1,0 +1,4 @@
+## Functions
+- Insert
+- Delete
+- Print
