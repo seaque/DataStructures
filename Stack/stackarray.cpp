@@ -70,8 +70,8 @@ int main()
 	stack2 = create();
 	for (int i=0; i < 10; i++)
 		push(stack1, i);	
-    for (int i=0; i < 4; i++)
-    	push(stack2, pop(stack1));
+    	for (int i=0; i < 4; i++)
+    		push(stack2, pop(stack1));
 
 	print(stack1);
   	system("pause");
