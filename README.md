@@ -1,16 +1,16 @@
 # (C++) Data Structures
 
-### Linked List
+- ### Linked List
   - Singly Linked 
   - Doubly Linked
-- **Stack**
-    - Array Implementation
-    - Linked List Implementation
-- **Queue**
-    - Array Implementation
-    - Linked List Implementation
-- **Trees**
+- ### Stack
+    - Array 
+    - Linked List 
+- ### Queue
+    - Array 
+    - Linked List
+- ### Trees
   - Binary Search Tree
   - Binary Heap
-- **Hash Table**
-- **Graph**
+- ### Hash Table
+- ### Graph
