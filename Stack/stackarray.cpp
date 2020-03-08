@@ -74,7 +74,7 @@ int main()
     	push(stack2, pop(stack1));
 
 	print(stack1);
-    system("pause");
+  	system("pause");
 	print(stack2);
 	system("pause");
 	return 0;
