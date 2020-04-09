@@ -64,7 +64,7 @@ int main()
 	insert(10);
 	print();
 	deletion();
-  deletion();
+	deletion();
 	print();
 
 	system("pause");
