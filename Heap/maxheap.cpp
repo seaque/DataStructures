@@ -54,28 +54,6 @@ void print()
 
 int main()
 {
-	arr = new int[size];
-	insert(21);
-	insert(61);
-	insert(56);
-	insert(17);
-	insert(93);
-	insert(35);
-	insert(10);
-	print();
-	deletion();
-	deletion();
-	print();
-
-	system("pause");
+	
 	return 0;
 }
-
-/*  
-
-      OUTPUT  
-93 61 56 17 21 35 10
-56 21 35 17 10
-Press any key to continue . . . 
-
-*/
