@@ -84,10 +84,10 @@ void print(node *r)
 		}
 		cout << r->data << " ";
 	}
-	system("pause");
 }
 
 int main()
 {
+    system("pause");
     return 0;
 }
