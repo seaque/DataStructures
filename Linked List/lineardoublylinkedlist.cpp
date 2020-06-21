@@ -89,12 +89,5 @@ void print(node *r)
 
 int main()
 {
-
-    node* list1 = NULL;
-    list1 = addtotail(list1, 21);
-    list1 = addtohead(list1, 16);
-    indexadd(list1, 23, 2);
-
-    print(list1);
     return 0;
 }
