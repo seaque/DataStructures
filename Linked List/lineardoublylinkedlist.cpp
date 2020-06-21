@@ -54,7 +54,7 @@ node *addtohead(node *r, int x)
 	return r;
 }
 
-void indexadd(node *r, int x, int index)
+void addbefore(node *r, int x, int before)
 {
 	if (r == NULL)
 		cout << " No data in linked list ";
@@ -62,7 +62,7 @@ void indexadd(node *r, int x, int index)
 	{
 		node *curr, *temp;
 		curr = r;
-        while (curr->data != index && curr->next != NULL)
+        while (curr->data != before && curr->next != NULL)
 			curr = curr->next;
 		temp = curr;
 		curr = new node;
