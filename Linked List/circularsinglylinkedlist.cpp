@@ -73,18 +73,20 @@ node *addtohead(node *r, int x)
 	return r;
 }
 
-node *addbefore(node *r, int x, int before)
+node *indexadd(node *r, int x, int index)  // Not be used to add to head.
 {
 	if (r == NULL)
 		r = create(r, x);
 	else
 	{
-	    node *curr;
-	    curr = r;
-        while (curr->next->data != before && curr->next != r)
+	    node *curr = r;
+	    int count = 0;
+		
+        	while (count != index-1 && curr->next != r) {
 		    curr = curr->next;
-	    node *tmp;
-	    tmp = new node;
+		    count++;
+		}
+	    node *tmp = new node;
 	    tmp->data = x;
 	    tmp->next = curr->next;
 	    curr->next = tmp;
