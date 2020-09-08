@@ -73,10 +73,12 @@ node *addtohead(node *r, int x)
 	return r;
 }
 
-node *indexadd(node *r, int x, int index)  // Not be used to add to head.
+node *indexadd(node *r, int x, int index)  
 {
 	if (r == NULL)
 		r = create(r, x);
+	if (index == 0)
+		r = addtohead(r, x);
 	else
 	{
 	    node *curr = r;
