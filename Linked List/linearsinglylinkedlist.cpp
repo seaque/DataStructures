@@ -64,7 +64,7 @@ node *addtohead(node *r, int x)
 {
 	if (r == NULL) 
 	{
-		r = olustur(r, x);
+		r = create(r, x);
 	}
 	else
 	{
