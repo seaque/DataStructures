@@ -23,7 +23,7 @@ void push(st *s, int x)
 		s->arr = new int[s->size];
 	if (s->top >= s->size)
 	{
-        //Creating a new array with 2x size.
+        	//Creating a new array with 2x size.
 		int *tmparr;
 		tmparr = new int[s->size*2];
 		for (int i=0; i <= s->top; i++)
@@ -44,7 +44,7 @@ int pop(st *s)
 	{
 		if (s->top <= s->size/2)
 		{
-            //Creating a new array with 1/2x size.
+            		//Creating a new array with 1/2x size.
 			int *tmparr;
 			tmparr = new int[s->size/2];
 			for (int i=0; i <= s->top; i++)
@@ -70,13 +70,13 @@ int main()
 	stack1 = create();
 	stack2 = create();
 	
-    for (int i=0; i < 10; i++) 
+    	for (int i=0; i < 10; i++) 
 		push(stack1, i);	
-    for (int i=0; i < 4; i++)
-    	push(stack2, pop(stack1));
-	//First 5 element of stack1 is now stack2.
+    	for (int i=0; i < 4; i++)
+    		push(stack2, pop(stack1));
+		//First 5 element of stack1 is now stack2.
     
-    print(stack1);
+    	print(stack1);
 	print(stack2);
 	
 	return 0;
