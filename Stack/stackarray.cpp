@@ -74,7 +74,7 @@ int main()
 		push(stack1, i);	
     	for (int i=0; i < 4; i++)
     		push(stack2, pop(stack1));
-		//First 5 element of stack1 is now stack2.
+	//First 5 element of stack1 is now stack2.
     
     	print(stack1);
 	print(stack2);
