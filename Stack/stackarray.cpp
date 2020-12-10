@@ -23,7 +23,7 @@ void push(st *s, int x)
 		s->arr = new int[s->size];
 	if (s->top >= s->size)
 	{
-        	//Creating a new array with 2x size.
+		//Creating a new array with 2x size.
 		int *tmparr;
 		tmparr = new int[s->size*2];
 		for (int i=0; i <= s->top; i++)
@@ -61,7 +61,7 @@ int pop(st *s)
 void print(st *s)
 {
 	for (int i = s->top; i > -1; i--)
-		cout << "Data [" << i << "]: " << s->arr[i] << "\n";
+		cout << s->arr[i] << "\n";
 }
 
 int main()
@@ -70,14 +70,17 @@ int main()
 	stack1 = create();
 	stack2 = create();
 	
-    	for (int i=0; i < 10; i++) 
-		push(stack1, i);	
-    	for (int i=0; i < 4; i++)
-    		push(stack2, pop(stack1));
-	//First 5 element of stack1 is now stack2.
+	for (int i=0; i < 10; i++) 
+		push(stack1, i);
+	//Pushing the first four elements of stack1 by popping.	
+	for (int i=0; i < 4; i++)
+    	push(stack2, pop(stack1));
     
-    	print(stack1);
+	cout << "Stack 1: \n";
+	print(stack1);
+	cout << "Stack 2: \n";
 	print(stack2);
 	
 	return 0;
 }
+
