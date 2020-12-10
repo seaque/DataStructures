@@ -74,20 +74,27 @@ void print(que *p)
 
 int main()
 {	
-	que *s1 = NULL;
-	que *s2 = NULL;
-	s1 = create(s1);
-	s2 = create(s2);
-	for (int i=0; i < 10; i++)
-		s1 = enqueue(s1, i);
-	for (int i=0; i < 5; i++) {
-		pair<que*,int> f = dequeue(s1, 0);
-		s1 = f.first;
-		s2 = enqueue(s2, f.second);
-	}
-	print(s1);
-	print(s2);
+	que *q1 = NULL;
+	que *q2 = NULL;
+	q1 = create(q1);
+	q2 = create(q2);
 	
-	system("pause");
+	for (int i=0; i < 10; i++)
+		q1 = enqueue(q1, i);
+	
+	cout << "Queue 1: \n";
+	print(q1);
+	
+	for (int i=0; i < 5; i++) 
+	{
+		pair<que*,int> f = dequeue(q1, 0);
+		q1 = f.first;
+		q2 = enqueue(q2, f.second);
+	}
+	cout << "\nQueue 2: \n";
+	print(q2);
+	cout << "\nQueue 1: \n";
+	print(q1);
+	
 	return 0;
 }
