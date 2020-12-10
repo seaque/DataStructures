@@ -72,7 +72,7 @@ int main()
 	
 	for (int i=0; i < 10; i++) 
 		push(stack1, i);
-	//Pushing the first four elements of stack1 by popping.	
+	//Pushing the last four elements of stack1 by popping.	
 	for (int i=0; i < 4; i++)
     	push(stack2, pop(stack1));
     
