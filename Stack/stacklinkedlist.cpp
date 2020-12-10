@@ -77,11 +77,30 @@ int main()
         stack1 = temp.first;
         stack2 = push(stack2, temp.second);
     }
-	cout << "Stack 2: \n";
+    cout << "Stack 2: \n";
     print(stack2);
-	cout << "Stack 1: \n";
+    cout << "Stack 1: \n";
     print(stack1);
 
     return 0;
 }
 
+/* 	OUTPUT
+Stack 1: 
+6
+5
+4
+3
+2
+1
+0
+Stack 2:
+4
+5
+6
+Stack 1:
+3
+2
+1
+0
+*/
