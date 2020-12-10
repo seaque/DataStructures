@@ -88,6 +88,5 @@ int main()
 	print(s1);
 	print(s2);
 	
-	system("pause");
 	return 0;
 }
