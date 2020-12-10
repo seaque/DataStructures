@@ -57,7 +57,6 @@ void print(node *p)
 			p = p->next;
 		}
 	}
-	system("pause");
 }
 
 int main()
@@ -69,16 +68,20 @@ int main()
 
     for (int i=0; i < 7; i++)
         stack1 = push(stack1, i);
+    cout << "Stack 1: \n";	
     print(stack1);
 	
     for (int i=0; i < 3; i++)
     {
-	pair<node*, int> t = pop(stack1, 0);
-        stack1 = t.first;
-        stack2 = push(stack2, t.second);
+	pair<node*, int> temp = pop(stack1, 0);
+        stack1 = temp.first;
+        stack2 = push(stack2, temp.second);
     }
+	cout << "Stack 2: \n";
     print(stack2);
+	cout << "Stack 1: \n";
     print(stack1);
 
     return 0;
 }
+
