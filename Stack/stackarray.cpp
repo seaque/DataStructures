@@ -85,8 +85,8 @@ int main()
 }
 
 /*
-		OUTPUT
-		Stack 1: 
+	OUTPUT
+Stack 1: 
 5
 4
 3
