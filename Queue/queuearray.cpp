@@ -94,7 +94,7 @@ pair<que*,int> dequeue(que *p, int x)
 	return make_pair(p, x);
 }
 
-void display(que *p)
+void print(que *p)
 {
 	if (p->rear > p->front)
 		for (int i = p->front + 1 ; i <= p->rear; i++)
@@ -117,17 +117,22 @@ int main()
 
 	for (int i=1; i <= 10; i++)
 		s1 = enqueue(s1, i);
-	display(s1);
-
+	cout << "Queue 1: ";
+	print(s1);
+	cout << "\n";
 	for (int i=0; i <= 5; i++)
 	{
 		pair<que*,int> f = dequeue(s1, 0);
 		s1 = f.first;
 		s2 = enqueue(s2, f.second);
 	}
-	display(s1);
-	display(s2);
+	cout << "Queue 1: ";
+	print(s1);
+	cout << "\n";
+	cout << "Queue 2: ";
+	print(s2);
 	
     system("pause");
     return 0;
 }
+
