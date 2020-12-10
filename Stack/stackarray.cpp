@@ -74,7 +74,7 @@ int main()
 		push(stack1, i);
 	//Pushing the last four elements of stack1 by popping.	
 	for (int i=0; i < 4; i++)
-    	push(stack2, pop(stack1));
+    		push(stack2, pop(stack1));
     
 	cout << "Stack 1: \n";
 	print(stack1);
