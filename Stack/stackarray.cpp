@@ -84,3 +84,19 @@ int main()
 	return 0;
 }
 
+/*
+		OUTPUT
+		Stack 1: 
+5
+4
+3
+2
+1
+0
+Stack 2:
+6
+7
+8
+9
+*/
+
